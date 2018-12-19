@@ -1,0 +1,37 @@
+from Tkinter import Tk, Label, Entry, Button, StringVar
+from tkMessageBox import showinfo
+
+my_app = Tk(className = 'Data Diri')
+
+L1 = Label(my_app, text = 'Nama Mahasiswa', font = ('Arial',24))
+L1.grid(row=0, column=0)
+str1 = StringVar( )
+E1 = Entry(my_app)
+E1.grid(row=0, column=1)
+L2 = Label(my_app, text="NIM", font= ('Arial', 24))
+L2.grid(row=1, column=0)
+str2 = StringVar(value=0)
+E2 = Entry(my_app)
+E2.grid(row=1, column=1)
+L3 = Label(my_app, text ='Buku Idola', font= ('Arial', 24))
+L3.grid(row=2, column=0)
+str3 = StringVar(value=1)
+E3 = Entry(my_app)
+E3.grid(row=2, column=1)
+L4 = Label(my_app, text="Idola dikalangan sahabat", font= ('Arial', 24))
+L4.grid(row=3, column=0)
+str4 = StringVar(value=2)
+E4 = Entry(my_app)
+E4.grid(row=3, column=1)
+L5 = Label(my_app, text="motto", font= ('Arial', 24))
+L5.grid(row=4, column=0)
+str5 = StringVar(value=3)
+E5 = Entry(my_app)
+E5.grid(row=4, column=1)
+
+def tutup():
+    my_app.destroy()
+
+B2 = Button(my_app, text = 'close',  command = tutup)
+B2.grid(row=6, column=1)
+my_app.mainloop()
